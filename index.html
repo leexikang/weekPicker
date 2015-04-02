@@ -12,7 +12,10 @@
 	<form>
 	<input type="text" id="week">	
 	</form><br/>
+	<button class="btn btn-default btn-week"> Sun </button>
 	<button class="btn btn-default btn-week"> Mon </button>
+	<button class="btn btn-default btn-week"> Tue </button>
+	<button class="btn btn-default btn-week"> Wed </button>
 	<button class="btn btn-default btn-week"> Thu </button>
 	<button class="btn btn-default btn-week"> Fri </button>
 	<button class="btn btn-default btn-week"> Sat </button>
@@ -20,32 +23,6 @@
 
 		<script type="text/javascript"  src="assests/jquery.js" ></script>
 		<script type="text/javascript"  src="assests/js/bootstrap.js" ></script>
-		<script type="text/javascript">
-
-		$(document).ready(function(){
-			$(".btn-week").click(function(){
-
-				if($(this).hasClass('btn-primary')){
-					$(this).removeClass('btn-primary');
-					$(this).addClass('btn-default');
-					var input = $("#week").val();
-					var deleteText = $(this).text() + ",";
-					var result =   input.replace(deleteText, "");
-					$("#week").val(result);
-
-
-
-
-				}else{
-
-					$(this).removeClass('btn-default');
-					$(this).addClass('btn-primary');
-					var $input = $("#week");
-					$input.val($input.val()+$(this).text()+",");
-
-				}
-			});
-		});
-		</script>
+		<script type="text/javascript" src="assests/js/weekPicker.js"></script>
 	</body>
 	</html>
